@@ -29,15 +29,6 @@ class Unicontrol extends CI_Controller {
 		$from = $this->uri->segment(3);
 		$this->pagination->initialize($config);		
 		$data['maindata'] = $this->Dbhelper->datapage($this->table,$config['per_page'],$from);
-
-		$data['artikel'] 	= $this->Dbhelper->getdata('fartikel');
-		$data['profil']  	= $this->Dbhelper->getdata('fprofil');
-		$data['ppdb']  		= $this->Dbhelper->getdata('fppdb');
-		$data['kurikulum'] 	= $this->Dbhelper->getdata('fkurikulum');
-		$data['fasilitas'] 	= $this->Dbhelper->getdata('ffasilitas');
-		$data['kesiswaan'] 	= $this->Dbhelper->getdata('fkesiswaan');
-		$data['berita']  	= $this->Dbhelper->getdata('fberita');
-		
 		$this->load->view($this->mainpage,$data);
 	}
     
@@ -51,14 +42,6 @@ class Unicontrol extends CI_Controller {
 		$data['maindata'] 	= $this->Dbhelper->getdatawall($this->table,$where);
 		$data['recentpost'] = $this->Dbhelper->getdatalimit($this->table,10);
 
-		$data['artikel'] 	= $this->Dbhelper->getdata('fartikel');
-		$data['profil']  	= $this->Dbhelper->getdata('fprofil');
-		$data['ppdb']  		= $this->Dbhelper->getdata('fppdb');
-		$data['kurikulum'] 	= $this->Dbhelper->getdata('fkurikulum');
-		$data['fasilitas'] 	= $this->Dbhelper->getdata('ffasilitas');
-		$data['kesiswaan'] 	= $this->Dbhelper->getdata('fkesiswaan');
-		$data['berita']  	= $this->Dbhelper->getdata('fberita');
-		
 		$this->load->view($this->inpage,$data);
 	}
 

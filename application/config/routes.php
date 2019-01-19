@@ -12,6 +12,11 @@ if ($getParam2 == 'index') {
 	$param2 = $getParam2;
 }
 
+$page = array('home', 'profil', 'ppdb', 'kesiswaan','fasilitas','kurikulum','berita','artikel','galeri','admin');
+if (!in_array($param, $page)) {
+    $baseparam = 'Nf';
+}
+
 $route['default_controller'] = 'Home';
 $route['404_override'] = 'error'; //to showing error
 $route['translate_uri_dashes'] = FALSE;
@@ -24,7 +29,5 @@ $route['admin']  = 'admin'; //manual routing
 $route[$param.'/index'] = $baseparam.'/index'; //pagination first page
 $route[$param.'/index/(:num)'] = $baseparam.'/index/(:num)'; //pg nxt page
 $route[$param.'/'.$param2] = $baseparam.'/read/'.$param2; // open article
-
-// $route[$param.'/'.$param2] = $param.'/read/'.$param2;
 
 

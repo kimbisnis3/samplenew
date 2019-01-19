@@ -1,11 +1,28 @@
 <?php 
 
+	$artikel 	= $this->Dbhelper->getdata('fartikel');
+	$profil  	= $this->Dbhelper->getdata('fprofil');
+	$ppdb  		= $this->Dbhelper->getdata('fppdb');
+	$kurikulum  = $this->Dbhelper->getdata('fkurikulum');
+	$fasilitas  = $this->Dbhelper->getdata('ffasilitas');
+	$kesiswaan  = $this->Dbhelper->getdata('fkesiswaan');
+	$berita  	= $this->Dbhelper->getdata('fberita');
+
+		// $data['artikel'] 	= $this->Dbhelper->getdata('fartikel');
+		// $data['profil']  	= $this->Dbhelper->getdata('fprofil');
+		// $data['ppdb']  		= $this->Dbhelper->getdata('fppdb');
+		// $data['kurikulum'] 	= $this->Dbhelper->getdata('fkurikulum');
+		// $data['fasilitas'] 	= $this->Dbhelper->getdata('ffasilitas');
+		// $data['kesiswaan'] 	= $this->Dbhelper->getdata('fkesiswaan');
+		// $data['berita']  	= $this->Dbhelper->getdata('fberita');
+
 	$wlogo 	= array('kode' => 'logo', );
 	$wtitle = array('kode' => 'titleweb', );
 	$logo  	= $this->Dbhelper->getdatawall('felementweb',$wlogo);
 	$title	= $this->Dbhelper->getdatawall('felementweb',$wtitle);
 	$sekolah 	= $this->Dbhelper->getdata('tcompany');
-		
+	
+	
 ?>
 
 
